@@ -6,8 +6,8 @@ using DG.Tweening;
 public class Bounce : MonoBehaviour
 {
     //private Transform transformy;
-    public List<GameObject> cubes = new List<GameObject>();
 
+    public float zAxis;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,20 +19,15 @@ public class Bounce : MonoBehaviour
         //transformy.DOMove(new Vector3(2, 0, 0), 1f, true);
         //Debug.Log("Moved");
 
-        
+        gameObject.transform.DORotate(new Vector3(0f, 0f, zAxis), 2f, RotateMode.LocalAxisAdd).SetLoops(-1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        RotateCubeAroundAxis();
+        
     }
 
-    void RotateCubeAroundAxis()
-    {
-        //(new Vector3(45, 0f, 0f), 1f, RotateMode.LocalAxisAdd).SetLoops(-1);
-        cubes[0].transform.DORotate(new Vector3(45f, 0f, 0f), 1f, RotateMode.LocalAxisAdd).SetLoops(-1);
-        cubes[1].transform.DORotate(new Vector3(0f, 45f, 0), 1f, RotateMode.LocalAxisAdd).SetLoops(-1);
-        cubes[2].transform.DORotate(new Vector3(0f, 0f, 45f), 1f, RotateMode.LocalAxisAdd).SetLoops(-1);
-    }
+
+
 }
