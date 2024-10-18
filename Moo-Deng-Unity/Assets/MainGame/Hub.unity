@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f704b1f28f84d5684eeba7b672a8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zAxis: 45
+  zAxis: 360
 --- !u!1 &868482611
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2f704b1f28f84d5684eeba7b672a8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zAxis: 45
+  zAxis: 360
 --- !u!1 &2142003157
 GameObject:
   m_ObjectHideFlags: 0
