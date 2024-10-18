@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4321694662751019782}
   - component: {fileID: 2419598872207057976}
   - component: {fileID: 8481000290818645502}
+  - component: {fileID: -2279020299964718787}
   m_Layer: 0
   m_Name: Tri_FallPrefab
   m_TagString: Untagged
@@ -130,3 +131,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-2279020299964718787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968458283604390843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8a0cdd79b154ae786f060f293c16c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

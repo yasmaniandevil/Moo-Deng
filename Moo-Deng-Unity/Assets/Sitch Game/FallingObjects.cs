@@ -22,8 +22,12 @@ public class FallingObjects : MonoBehaviour
 
         float randomSpeed = Random.Range(.5f, 2f);
         transformy.position = transform.position + new Vector3(0, -5 * randomSpeed * Time.deltaTime, 0);
-        Debug.Log(randomSpeed);
+        
 
+        if(this.gameObject.transform.position.y <= -5)
+        {
+            Destroy(this.gameObject);
+        }
         
     }
 }

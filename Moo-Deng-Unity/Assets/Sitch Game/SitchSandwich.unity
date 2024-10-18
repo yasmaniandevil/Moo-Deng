@@ -243,10 +243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c814b55bb0c045e8909b0060fd3c26e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6184539180234315767, guid: a93052b3f82d442db9cc74f2e5ac5a11, type: 3}
-  - {fileID: 7146497478042720327, guid: 7c2bb750f5ec9435ea1ea51b8025b05a, type: 3}
-  - {fileID: 3968458283604390843, guid: c07c73ce55c394a12a3648e42e596a83, type: 3}
+  triPrefab: {fileID: 3968458283604390843, guid: c07c73ce55c394a12a3648e42e596a83, type: 3}
+  circlePrefab: {fileID: 6184539180234315767, guid: a93052b3f82d442db9cc74f2e5ac5a11, type: 3}
+  hexPrefab: {fileID: 7146497478042720327, guid: 7c2bb750f5ec9435ea1ea51b8025b05a, type: 3}
 --- !u!4 &1018570630
 Transform:
   m_ObjectHideFlags: 0

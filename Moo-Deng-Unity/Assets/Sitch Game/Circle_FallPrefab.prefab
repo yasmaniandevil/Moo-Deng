@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6203812200862337741}
   - component: {fileID: 2276493688537084760}
   - component: {fileID: 5932866990382648253}
+  - component: {fileID: -7837923025316512698}
   m_Layer: 0
   m_Name: Circle_FallPrefab
   m_TagString: Untagged
@@ -120,3 +121,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-7837923025316512698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6184539180234315767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e8a0cdd79b154ae786f060f293c16c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
