@@ -6,7 +6,8 @@ using DG.Tweening;
 public class FallingObjects : MonoBehaviour
 {
     private Transform transformy;
-   
+
+    private bool isMoving = true;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +19,33 @@ public class FallingObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transformy.DOMove(new Vector3(-5, 0, 0), 1f, true);
 
-        float randomSpeed = Random.Range(.5f, 2f);
-        transformy.position = transform.position + new Vector3(0, -5 * randomSpeed * Time.deltaTime, 0);
+        MoveFunction();
+       
         
+    }
 
-        if(this.gameObject.transform.position.y <= -5)
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
+            isMoving = false;
+            Debug.Log("turned false");
+        }
+    }
+
+    void MoveFunction()
+    {
+        if(isMoving == true)
+        {
+            float randomSpeed = Random.Range(.5f, 2f);
+            transformy.position = transform.position + new Vector3(0, -5 * randomSpeed * Time.deltaTime, 0);
+
+
+            if (this.gameObject.transform.position.y <= -5)
+            {
+                Destroy(this.gameObject);
+            }
         }
         
     }
