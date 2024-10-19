@@ -29,24 +29,7 @@ public class FallManagerTest : MonoBehaviour
         }
     }
 
-    /*private void InstantiatePrefab()
-    {
-        for(int groups = 0; groups < maxGroupsPerWave; groups++)
-        {
-            int randomObstacles = Random.Range(4, 7);
 
-            for (int i = 0; i < randomObstacles; i++)
-            {
-                Vector3 randomPos = new Vector3(Random.Range(8, -8), Random.Range(5, 15), 0);
-                int randomPrefab;
-                randomPrefab = Random.Range(0, prefabsList.Count);
-                Instantiate(prefabsList[randomPrefab], randomPos, Quaternion.identity);
-
-            }
-        }
-       
-        
-    }*/
 
     IEnumerator InstantiatePrefabs()
     {
