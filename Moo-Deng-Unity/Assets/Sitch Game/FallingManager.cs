@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 public class FallingManager : MonoBehaviour
 {
 
-
-    
-
     public GameObject triPrefab;
     public GameObject circlePrefab;
     public GameObject hexPrefab;

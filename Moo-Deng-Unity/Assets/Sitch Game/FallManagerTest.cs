@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class FallManagerTest : MonoBehaviour
 {
     public List<GameObject> prefabsList = new List<GameObject>();
-    //private int randomPrefab;
+    
 
     public int maxGroupsPerWave = 3;
     public float timeBtwnGroups = 3f;
@@ -27,6 +27,8 @@ public class FallManagerTest : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Debug.Log("Restarted");
         }
+
+        
     }
 
 
@@ -62,6 +64,10 @@ public class FallManagerTest : MonoBehaviour
 
 
     }
-    
-    
+
+   
+
+
+
+
 }

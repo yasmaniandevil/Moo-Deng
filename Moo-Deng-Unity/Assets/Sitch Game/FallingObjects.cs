@@ -6,6 +6,7 @@ using DG.Tweening;
 public class FallingObjects : MonoBehaviour
 {
     private bool isMoving = true;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +26,14 @@ public class FallingObjects : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isMoving = false;
-            GetComponent<Rigidbody2D>().isKinematic = true;
+            //GetComponent<Rigidbody2D>().isKinematic = true;
             //store currentPos relative to plate
             //Vector3 localPos = transform.position - collision.transform.position;
             //parent it to get its transform
-            transform.SetParent(collision.transform);
+            //transform.SetParent(collision.transform);
             //maintain objpos relative to plate
             //transform.localPosition = localPos;
-            Debug.Log("follow plate");
+            //Debug.Log("follow plate");
         }
     }
 

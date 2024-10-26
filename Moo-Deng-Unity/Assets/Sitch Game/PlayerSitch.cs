@@ -12,11 +12,15 @@ public class PlayerSitch : MonoBehaviour
     public TextMeshProUGUI scoreDisplayText;
     private int lives = 5;
 
+    public List<GameObject> collidedObjs = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         scoreDisplayText.text = "Lives: " + lives;
+
+        
     }
 
     // Update is called once per frame
@@ -32,6 +36,19 @@ public class PlayerSitch : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("collided");
+            collision.gameObject.tag = "Caught";
+
+            if (collision.gameObject.CompareTag("Caught"))
+            {
+                collidedObjs.Add(collision.gameObject);
+
+                foreach(GameObject collidedObjects in collidedObjs)
+                {
+                    transform.SetParent(gameObject.transform);
+                    //collision.GetComponent<Rigidbody2D>().isKinematic = true;
+                }
+            }
+
             lives--;
             Debug.Log("Lives: " + lives);
             scoreDisplayText.text = "Lives: " + lives;
