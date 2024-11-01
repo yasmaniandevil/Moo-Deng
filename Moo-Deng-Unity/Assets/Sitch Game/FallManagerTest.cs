@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 public class FallManagerTest : MonoBehaviour
 {
     public List<GameObject> prefabsList = new List<GameObject>();
-    
+
+    public GameObject lettucePrefab;
+    public GameObject carrot;
+
+    private Dictionary<string, GameObject> newPrefab = new Dictionary<string, GameObject>();
+   
 
     public int maxGroupsPerWave = 3;
     public float timeBtwnGroups = 3f;
@@ -16,6 +21,7 @@ public class FallManagerTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        newPrefab.Add("Lettuce", lettucePrefab);
         StartCoroutine(InstantiatePrefabs());
     }
 

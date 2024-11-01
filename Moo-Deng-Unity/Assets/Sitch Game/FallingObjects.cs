@@ -6,7 +6,7 @@ using DG.Tweening;
 public class FallingObjects : MonoBehaviour
 {
     private bool isMoving = true;
-    
+   
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class FallingObjects : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            isMoving = false;
+            //isMoving = false;
             //GetComponent<Rigidbody2D>().isKinematic = true;
             //store currentPos relative to plate
             //Vector3 localPos = transform.position - collision.transform.position;
@@ -37,6 +37,7 @@ public class FallingObjects : MonoBehaviour
         }
     }
 
+    //moves the game object only if isMoving is true
     void MoveFunction()
     {
         if(isMoving == true)
