@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
 
     private bool isGrounded = true;
 
-    
+    private bool isFacingRight;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,13 @@ public class PlayerScript : MonoBehaviour
             SceneManager.LoadScene(1);
         }
 
+        if(horizontalInput < 0)
+        {
+            Debug.Log("pressing a");
+        }
+
+        
+
         
     }
 
@@ -55,5 +62,16 @@ public class PlayerScript : MonoBehaviour
         }
         //apply upward force to the rigidbody for the jump
         rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
+    }
+
+    void Flip()
+    {
+        
+
+        isFacingRight = !isFacingRight;
+        Quaternion theRot = transform.localRotation;
+        theRot.y = 180f;
+        transform.localRotation = theRot;
+
     }
 }
